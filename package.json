@@ -1,31 +1,26 @@
 {
   "name": "dist-wrap",
-  "version": "2.1.0",
-  "main": "sas",
+  "version": "0.0.2",
+  "main": "index",
   "keywords": [
-    "async",
-    "recursively",
-    "callback",
-    "browser",
-    "nodejs"
+    "front-end",
+    "dist",
+    "wrap",
+    "amd",
+    "module",
+    "global"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hezedu/sas.git"
+    "url": "https://github.com/hezedu/dist-wrap.git"
   },
   "author": {
     "name": "hezedu"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "babel-eslint": "^6.1.2",
-    "eslint": "^3.4.0",
-    "uglify-js": "^2.8.21"
-  },
-  "licenses": "MIT",
+  "license": "MIT",
   "email": "hezedu@hotmail.com",
-  "description": "Async for node and the browser . can be recursively callback",
+  "description": "Used for front-end dist, module, amd, global wrap source.",
   "bugs": {
-    "url": "https://github.com/hezedu/sas/issues"
+    "url": "https://github.com/hezedu/dist-wrap/issues"
   }
 }
