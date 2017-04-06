@@ -11,7 +11,7 @@
 比如源`source`:
 ```js
 var hello = 'hello';
-module.exports = hello;
+module.exports = hello; //此行是必须的。
 ```
 执行
 ```js
