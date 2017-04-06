@@ -1,8 +1,13 @@
 var fs = require('fs');
-var tpl = fs.readFileSync('./tpl', 'utf-8');
+var path = require('path');
+var tpl = fs.readFileSync(path.join(__dirname, './tpl'), 'utf-8');
 tpl = tpl.split('SOURCE');
 var top = tpl[0], bottom = tpl[1];
 var _findModuleReg = /(module\.exports+)([\s\S]*)(\n|$)/;
+
+function _getNote(source){
+  return /^\/\*([\s\S]*)\*\/(\n*)/.exec(source)[0] || '';
+}
 
 function _findModule(source){
   var result = _findModuleReg.exec(source);
@@ -25,8 +30,10 @@ function wrap(source, name){
   name = name || mName;
   var _bottom = bottom.replace(/MODULE_REF/g, mName);
   _bottom = _bottom.replace('OUT_NAME', name);
+  var headNote = _getNote(source);
+  source = source.replace(headNote, '');
   source = _addBlank(source);
-  return top  + source +  _bottom;
+  return headNote  + top  + source +  _bottom;
 }
 
 module.exports = wrap;
