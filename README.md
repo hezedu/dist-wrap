@@ -1,5 +1,5 @@
 # dist-warp
-简单的将单个CommonJS文件打包成前端文件。
+简单的将单个CommonJS代码包裹成前端代码。
 ## 安装
 
 `npm install dist-warp`
@@ -38,7 +38,7 @@ warp(source);
   }
 })();
 ```
-如果想要绑定到全局的名字不一样，可以：
+如果想要绑定到全局的名字不一样，你可以用第二个参数：
 ```js
-warp(source, 'Hello');
+warp(source, 'HELLO');
 ```
