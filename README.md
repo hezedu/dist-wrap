@@ -1,5 +1,5 @@
 # dist-warp
-简单的将CommonJS代码包裹成前端代码，前端支持`CommonJS`, `amd`, `global`加载。
+简单的将CommonJS代码包裹成前端代码，支持`CommonJS`, `amd`, `global`加载。
 ## 安装
 
 `npm install dist-warp`
@@ -10,7 +10,7 @@
 ## API
 ### warp(source)
 ### warp(source, globalName)
-必须在源文件中包含一行 `module.exports = someModule`。
+必须在源文件中包含一行 `module.exports = someModule`
 
 比如源`source`:
 ```js
@@ -38,11 +38,11 @@ var result = warp(source);
       return hello;
     });
   }else{
-    this.hello = hello;
-  }
+    this.hello = hello; //this是全局，.hello可以自定义,见下文
+  }
 })();
 ```
-###自定义全局命名
+### 自定义全局命名
 如果想要绑定到全局的名字不一样，你可以用第二个参数：
 ```js
 warp(source, 'HELLO');
