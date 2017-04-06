@@ -31,12 +31,12 @@ var result = warp(source);
   //module.exports = hello;
 
 //dist-wrap bottom
-  if (typeof define === 'function' && define.amd) {
-    define(function() {
+  if(typeof module === 'object' && module.exports){
+      module.exports = hello;
+  }else if(typeof define === 'function' && define.amd) {
+    define(function(){
       return hello;
     });
-  }else if(typeof module === 'object' && module.exports){
-    module.exports = hello;
   }else{
     this.hello = hello;
   }
