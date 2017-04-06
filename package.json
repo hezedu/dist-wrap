@@ -1,0 +1,31 @@
+{
+  "name": "dist-wrap",
+  "version": "2.1.0",
+  "main": "sas",
+  "keywords": [
+    "async",
+    "recursively",
+    "callback",
+    "browser",
+    "nodejs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hezedu/sas.git"
+  },
+  "author": {
+    "name": "hezedu"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.4.0",
+    "uglify-js": "^2.8.21"
+  },
+  "licenses": "MIT",
+  "email": "hezedu@hotmail.com",
+  "description": "Async for node and the browser . can be recursively callback",
+  "bugs": {
+    "url": "https://github.com/hezedu/sas/issues"
+  }
+}

@@ -1,9 +1,9 @@
 (function(){
-//############## TOP by dist-wrap ##############
+//############## dist-wrap:TOP ##############
 
 SOURCE
 
-//############## BOTTOM by dist-wrap ##############
+//############## dist-wrap:BOTTOM ##############
   if (typeof define === 'function' && define.amd) {
     define(function() {
       return MODULE_REF;
