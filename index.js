@@ -6,7 +6,8 @@ var top = tpl[0], bottom = tpl[1];
 var _findModuleReg = /(module\.exports+)([\s\S]*)(\n|$)/;
 
 function _getNote(source){
-  return /^\/\*([\s\S]*)\*\/(\n*)/.exec(source)[0] || '';
+  var _headNote = /^\/\*([\s\S]*)\*\/(\n*)/.exec(source);
+  return _headNote ? _headNote[0] : '';
 }
 
 function _findModule(source){

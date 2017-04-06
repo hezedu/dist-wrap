@@ -1,5 +1,5 @@
 # dist-warp
-简单的将CommonJS代码包裹成前端代码，包括`module`, `amd`, `global`。
+简单的将CommonJS代码包裹成前端代码，前端支持`CommonJS`, `amd`, `global`加载。
 ## 安装
 
 `npm install dist-warp`
@@ -15,7 +15,7 @@
 比如源`source`:
 ```js
 var hello = 'hello';
-module.exports = hello; //此行必须有。
+module.exports = hello; //这个必须有
 ```
 执行
 ```js
@@ -25,12 +25,12 @@ var result = warp(source);
 结果result:
 ```js
 (function(){
-//############## TOP ############## by dist-wrap
+//dist-wrap top
 
   var hello = 'hello';
   //module.exports = hello;
 
-//############## BOTTOM ############## by dist-wrap
+//dist-wrap bottom
   if (typeof define === 'function' && define.amd) {
     define(function() {
       return hello;
@@ -38,7 +38,7 @@ var result = warp(source);
   }else if(typeof module === 'object' && module.exports){
     module.exports = hello;
   }else{
-    this.hello = hello; //绑定到全局，可自定义，见下面。
+    this.hello = hello;
   }
 })();
 ```
