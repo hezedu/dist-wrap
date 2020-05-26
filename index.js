@@ -6,8 +6,8 @@ var top = tpl[0], bottom = tpl[1];
 var _findModuleReg = /(module\.exports+)([\s\S]*)(\n|$)/;
 
 function _getNote(source){
-  var _headNote = /^\/\*([\s\S]*)\*\/(\n*)/.exec(source);
-  return _headNote ? _headNote[0] : '';
+  var _headNote = /^(\s*)\/\*([\s\S]*)\*\//.exec(source);
+  return _headNote ? _headNote[0] + '\n' : '';
 }
 
 function _findModule(source){
@@ -34,7 +34,10 @@ function wrap(source, name){
   var headNote = _getNote(source);
   source = source.replace(headNote, '');
   source = _addBlank(source);
-  return headNote  + top  + source +  _bottom;
+  return {
+    headNote,
+    code: top  + source +  _bottom
+  };
 }
 
 module.exports = wrap;

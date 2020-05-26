@@ -1,6 +1,5 @@
 (function(){
 //dist-wrap top
-
 SOURCE
 
 //dist-wrap bottom

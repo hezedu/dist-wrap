@@ -1,7 +1,7 @@
 {
   "name": "dist-wrap",
-  "version": "2.0.1",
-  "main": "index",
+  "version": "3.0.1",
+  "main": "index.js",
   "keywords": [
     "front-end",
     "dist",
@@ -10,6 +10,9 @@
     "module",
     "global"
   ],
+  "files": [
+    "index.js", 
+    "tpl"],
   "repository": {
     "type": "git",
     "url": "https://github.com/hezedu/dist-wrap.git"

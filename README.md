@@ -13,6 +13,7 @@
 
 比如源`source`:
 ```js
+/* hello */
 var hello = 'hello';
 module.exports = hello; //这个必须有
 ```
@@ -23,6 +24,7 @@ var result = wrap(source);
 ```
 结果result:
 ```js
+/* hello */
 (function(){
 //dist-wrap top
 
