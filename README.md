@@ -1,5 +1,5 @@
 # dist-wrap
-简单的将CommonJS代码转成前端直接能src的代码，支持`amd`, `global`加载。
+简单的将CommonJS代码转成`amd`加载或前端直接能 src 的代码。
 ## 安装
 `npm install dist-wrap --save-dev`
 ## 特性
