@@ -21,8 +21,9 @@ module.exports = hello; //这个必须有
 ```js
 var wrap = require('dist-wrap');
 var result = wrap(source);
+conosle.log(result.headerNote + result.code);
 ```
-结果result:
+结果:
 ```js
 /* hello */
 (function(){
